@@ -19,10 +19,10 @@ for i in range(len(traffic_list_lines)):
     car_name = traffic_list_lines[i]
     targets.append('MODEL={}'.format(car_name))
 
+ai_fixed_line = 'AI=fixed\n'
+
 # clean current AI=fixed
-for l in entry_list_lines:
-    if l == 'AI=fixed\n':
-        entry_list_lines.remove(l)
+entry_list_lines = [ i for i in entry_list_lines if i != ai_fixed_line]
 
 i = 0
 while i < len(entry_list_lines):
@@ -31,7 +31,7 @@ while i < len(entry_list_lines):
         continue
 
     newIndex = i + 8
-    entry_list_lines.insert(newIndex, 'AI=fixed\n')
+    entry_list_lines.insert(newIndex, ai_fixed_line)
 
     i += 1
 
