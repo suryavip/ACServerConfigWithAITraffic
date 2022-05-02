@@ -19,6 +19,11 @@ for i in range(len(traffic_list_lines)):
     car_name = traffic_list_lines[i]
     targets.append('MODEL={}'.format(car_name))
 
+# clean current AI=fixed
+for l in entry_list_lines:
+    if l == 'AI=fixed\n':
+        entry_list_lines.remove(l)
+
 i = 0
 while i < len(entry_list_lines):
     if entry_list_lines[i] not in targets:
