@@ -43,7 +43,7 @@ EnableClientMessages: false
 # Enable CSP custom position updates. This is an improved version of batched position updates, reducing network traffic even further. CSP 0.1.77+ required
 EnableCustomUpdate: false
 AiParams:
-# Radius around a player in which AI cars won't despawn
+  # Radius around a player in which AI cars won't despawn
   PlayerRadiusMeters: 200
   # Offset the player radius in direction of the velocity of the player so AI cars will despawn earlier behind a player
   PlayerPositionOffsetMeters: 100
@@ -76,7 +76,7 @@ AiParams:
   # Maximum time an AI car will stop/slow down after a collision
   MaxCollisionStopTimeSeconds: 3
   # Default maximum AI speed. This is not an absolute maximum and can be overridden with RightLaneOffsetKph and MaxSpeedVariationPercent
-  MaxSpeedKph: 80
+  MaxSpeedKph: 70
   # Speed offset for right lanes. Will be added to MaxSpeedKph
   RightLaneOffsetKph: 20
   # Maximum speed variation
@@ -100,11 +100,11 @@ AiParams:
   # Enable two way traffic. This will allow AI cars to spawn in lanes with the opposite direction of travel to the player.
   TwoWayTraffic: false
   # AI cornering speed factor. Lower = AI cars will drive slower around corners.
-  CorneringSpeedFactor: 1
+  CorneringSpeedFactor: 0.5
   # AI cornering brake distance factor. Lower = AI cars will brake later for corners.
-  CorneringBrakeDistanceFactor: 1
+  CorneringBrakeDistanceFactor: 2
   # AI cornering brake force factor. This is multiplied with DefaultDeceleration. Lower = AI cars will brake less hard for corners.
-  CorneringBrakeForceFactor: 1
+  CorneringBrakeForceFactor: 0.5
   # Name prefix for AI cars. Names will be in the form of '<NamePrefix> <SessionId>'
   NamePrefix: Traffic
   # Ignore obstacles for some time if the AI car is stopped for longer than x seconds
