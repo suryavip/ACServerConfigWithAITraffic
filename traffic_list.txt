@@ -1,13 +1,25 @@
-traffic_Hino_Rainbow_Bus
-hk51_traffic_honda_jazz
-hk51_traffic_isuzu_giga_long
-hk51_traffic_mule_short_truck
-hk51_traffic_tank_truck
-hk51_traffic_tesla_model3
-hk51_traffic_toyota_alphard
-hk51_traffic_toyota_hiace
-hk51_traffic_toyota_prius_taxi
-hk51_traffic_vw_golf_r
-traffic_toyota_crown_traffic
-traffic_toyota_crown_traffic_taxi
-toyota_yaris_2010_1.8_GRMN_traffic
+traffic_Hino_Rainbow_Bus			:fixed
+hk51_traffic_honda_jazz				:fixed
+hk51_traffic_isuzu_giga_long		:fixed
+hk51_traffic_mule_short_truck		:fixed
+hk51_traffic_tank_truck				:fixed
+hk51_traffic_tesla_model3			:fixed
+hk51_traffic_toyota_alphard			:fixed
+hk51_traffic_toyota_hiace			:fixed
+hk51_traffic_toyota_prius_taxi		:fixed
+hk51_traffic_vw_golf_r				:fixed
+traffic_toyota_crown_traffic		:fixed
+traffic_toyota_crown_traffic_taxi	:fixed
+toyota_yaris_2010_1.8_GRMN_traffic	:fixed
+honda_acty_ha3						:fixed
+ddm_suzuki_swift					:auto
+ks_toyota_ae86						:auto
+ks_toyota_gt86						:auto
+ks_nissan_skyline_r34				:auto
+ks_nissan_370z						:auto
+ddm_honda_civic_ek9					:auto
+ddm_honda_civic_fd2					:auto
+ks_mazda_mx5_nd						:auto
+ks_mazda_rx7_spirit_r				:auto
+ddm_mugen_civic_ek9					:auto
+subaru_wrx_sti_gc8_sbt				:auto

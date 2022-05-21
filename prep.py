@@ -1,6 +1,6 @@
 import sys
 
-print('Set AI=fixed for all traffic cars...')
+print('Set AI parameters for cars...')
 
 # opening entry_list.ini
 entry_list_filename = 'entry_list.ini'
@@ -14,24 +14,27 @@ with open('traffic_list.txt', 'r') as file:
     traffic_list_lines = file.readlines()
 
 # get lines where the traffic model name mentioned
-targets = []
+targets = {}
 for i in range(len(traffic_list_lines)):
-    car_name = traffic_list_lines[i]
-    targets.append('MODEL={}'.format(car_name))
+    splitted = traffic_list_lines[i].split(':')
+    car_name = splitted[0].strip()
+    value = splitted[1].strip()
+    line = 'MODEL={}\n'.format(car_name)
+    targets[line] = value
 
-ai_fixed_line = 'AI=fixed\n'
-
-# clean current AI=fixed
-entry_list_lines = [ i for i in entry_list_lines if i != ai_fixed_line]
+# clean current AI=fixed and AI=auto
+entry_list_lines = [ i for i in entry_list_lines if i.startswith('AI=', 0, 3) == False]
 
 i = 0
 while i < len(entry_list_lines):
-    if entry_list_lines[i] not in targets:
+    if entry_list_lines[i] not in targets.keys():
         i += 1
         continue
 
     newIndex = i + 8
-    entry_list_lines.insert(newIndex, ai_fixed_line)
+    ai_line = 'AI={}\n'.format(targets[entry_list_lines[i]])
+    print('{} set to {}'.format(entry_list_lines[i], ai_line))
+    entry_list_lines.insert(newIndex, ai_line)
 
     i += 1
 
